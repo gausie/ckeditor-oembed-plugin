@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * CKEditor support for the oEmbed module.
+ */
+
+/**
+ * Implements hook_ckeditor_plugin().
+ *
+ * Register the CKEditor plugin for the CKEditor module.
+ */
+function oembed_ckeditor_ckeditor_plugin() {
+  return array(
+    'oembed' => array(
+      'name' => 'oembed',
+      'desc' => t('Embed media'),
+      'path' => drupal_get_path('module', 'oembed_ckeditor') . '/plugin/',
+      'buttons' => array(
+        'oembed' => array(
+          'icon' => 'icons/oembed.png',
+          'label' => 'Embed',
+        )
+      ),
+    )
+  );
+}

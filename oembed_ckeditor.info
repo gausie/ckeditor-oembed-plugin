@@ -1,0 +1,5 @@
+name = "oEmbed CKEditor"
+description = "Add an oembed button to CKEditor."
+package = oEmbed
+dependencies[] = oembed
+core = 7.x
