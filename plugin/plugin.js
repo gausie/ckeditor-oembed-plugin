@@ -17,8 +17,6 @@
 
 			var cls = editor.config.oembedClass || 'oembed';
 
-			console.dir(editor.lang);
-
 			editor.widgets.add( 'oembed', {
 				inline: false,
 				dialog: 'oembed',
