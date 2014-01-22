@@ -1,4 +1,4 @@
-ckeditor-oembed-plugin
+oembed_ckeditor
 ======================
 
 This is a plugin for [CKEditor](http://ckeditor.com) to allow users to use insert `[embed][/embed]` shortcode in the [oEmbed plugin for Drupal](https://drupal.org/project/oembed) with a nice widget interface.
