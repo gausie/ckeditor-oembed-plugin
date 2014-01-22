@@ -2,10 +2,8 @@ CKEDITOR.dialog.add( 'oembed', function( editor ) {
 
 	'use strict';
 
-	var lang = editor.lang.oembed;
-
 	return {
-		title: lang.title,
+		title: Drupal.t("Embed media"),
 		minHeight: 1,
 		contents: [
 			{
@@ -14,7 +12,7 @@ CKEDITOR.dialog.add( 'oembed', function( editor ) {
 					{
 						id: 'url',
 						type: 'text',
-						label: lang.dialogInput,
+						label: Drupal.t("Add your media url here"),
 
 						setup: function( widget ) {
 							this.setValue( widget.data.url );

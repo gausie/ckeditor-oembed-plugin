@@ -4,7 +4,6 @@
 
 	CKEDITOR.plugins.add( 'oembed', {
 
-		lang: 'en,en-gb',
 		requires: 'widget,dialog',
 		icons: 'oembed',
 		hidpi: true,
@@ -17,13 +16,18 @@
 
 			var cls = editor.config.oembedClass || 'oembed';
 
+
+			editor.ui.addButton('oembed', {
+				label : Drupal.t('Embed'),
+				command : 'oembed'
+			});
+
 			editor.widgets.add( 'oembed', {
 				inline: false,
 				dialog: 'oembed',
-				button: editor.lang.oembed.button,
 				mask: true, // prevent clickable
 				allowedContent: 'p(!' + cls + ')',
-				pathName: editor.lang.oembed.pathName,
+				pathName: 'oembed',
 
 				template: '<p class="' + cls + '" data-cke-survive=1></p>',
 
@@ -36,7 +40,7 @@
 				},
 
 				data: function() {
-					this.element.$.innerHTML = editor.lang.oembed.widgetPrefix + this.data.url;
+					this.element.$.innerHTML = Drupal.t('Embedding media from: ') + this.data.url;
 				},
 
 				upcast: function( el, data ) {
